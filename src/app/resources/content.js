@@ -77,7 +77,7 @@ const home = {
 const about = {
   label: "Profile",
   title: "Akshay Gupta",
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from ${person.exactLoaction}`,
   tableOfContent: {
     display: true,
     subItems: false,
