@@ -1,24 +1,27 @@
 import { InlineCode } from "@/once-ui/components";
+import { title } from "process";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Akshay",
+  middleName: "Kumar",
+  lastName: "Gupta",
   get name() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName} ${this.middleName} ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  role: "Full-stack Engineer",
+  avatar: "/images/Akshay_k_Gupta_photo.png",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  exactLoaction: "Bengaluru, India",
+  languages: ["Java","Spring Boot", "Python", "NodeJS", "GenAI", "SQL", "NoSQL", "ReactJS"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+     I occasionally share insights on software development, emerging technologies,
+      and the intersection of innovation and engineering, blending practical solutions with creative thinking.
     </>
   ),
 };
@@ -27,14 +30,14 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/akshayx11/",
+  },
+  {
+    name: "Download Resume",
+    icon: "downloadFile",
+    link: "https://drive.usercontent.google.com/download?id=1Epn5H8eqnuORNP3l6UnYx5LZH7C89W3v&export=download&authuser=0"
   },
   {
     name: "X",
@@ -44,7 +47,12 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:hello@akshaygupta.me",
+  },
+  {
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/akshayx11",
   },
 ];
 
@@ -52,18 +60,23 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Full-stack engineer</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      <br/>I am  Akshay, a highly competent <InlineCode>full-stack software engineer</InlineCode> 
+      with 6.8 years of hands-on expertise in a versatile
+      technology stack, including Java, Spring Boot, Microservices, Python, NodeJS and ReactJS. I specialize in
+      GenAI-driven applications and have experience with AWS services. My skills also cover SQL and NoSQL
+      (Mongodb) databases, and I excel in project planning, system design, and aligning technology with business
+      goals.
+
     </>
   ),
 };
 
 const about = {
-  label: "About",
-  title: "About me",
+  label: "Profile",
+  title: "Akshay Gupta",
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -73,17 +86,18 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "https://cal.com/akshayguptame/quick-meet",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+       Akshay Kumar Gupta is a full-stack software engineer with 6.8 years of experience 
+       in developing scalable and secure software solutions. His expertise spans Java, Spring Boot, Python, NodeJS,  Kafka, 
+       GenAI-driven applications, and cloud-native development using AWS. Passionate about solving complex challenges, 
+       Akshay combines cutting-edge technologies with solid design principles to deliver impactful results.
       </>
     ),
   },
@@ -92,45 +106,77 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "McKinsey & Company",
+        timeframe: "2022 - 2024",
+        role: "Software Engineer II",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+          Engage in diverse domains and technologies, encompassing Microservices, Java, Spring Boot,
+          NextJS, NodeJS, ReactJS, and Python, to drive innovative solutions.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+          Development experience in GenAI driven applications with OpenAI, Prompt Engineering, Vector db,
+          LangChain and RAG use cases.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+          Leverage AWS and Azure services to ensure seamless integration and robust application development.
+          </>,
+          <>
+          Led a backend team of 10+ team members for a significant pharmaceutical project with one of the
+          top ten Pharma organizations.
+          </>,
+          <>Led the team for a GenAI project, including frontend and backend development.</>,
+          <>Contributed to the development of ELK stack and Kibana plugins for one of the largest fin-tech
+          organizations.</>,
+          <>Expertise in system design, including the development of microservices architectures, RESTful APIs,
+          and cloud-based solutions, ensuring high scalability, fault tolerance, and performance optimization.
           </>,
         ],
         images: [],
       },
+      {
+        company: "Lumen Technologies",
+        timeframe: "2020 - 2022",
+        role: "Software Development Consultant I",
+        achievements: [
+          <>
+          Worked on Lumen’s Cloud Application Manager (CAM) web portal and its microservices, enabling orchestration and automation of infrastructure, application, and service delivery across various cloud providers like AWS, GCP, Azure, and Lumen Cloud.
+          </>,
+          <>
+          Improved deployment efficiency by 30% through automation, streamlining workflows and reducing manual efforts.
+          </>,
+          <>
+          Leveraged Python, Java, AngularJS, and MongoDB to develop and maintain application features.
+          </>,
+          <>
+          Gained experience with AWS, GCP, and Azure integration APIs to enhance application interoperability and cloud adoption.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Snapwiz Edutec India Pvt. Ltd.",
+        timeframe: "2018 - 2020",
+        role: "Software Engineer",
+        achievements: [
+          <>
+          Contributed to the development of the Edulastic Learning Management System, serving over 10 million users globally.
+          </>,
+          <>
+          Developed backend functionalities using NodeJS, Java, MongoDB, and MySQL, ensuring robust and efficient data management.
+          </>,
+          <>
+          Enhanced frontend interactivity and responsiveness using JavaScript (ES6), jQuery, HTML5, and CSS3.
+          </>,
+          <>
+          Managed all development phases related to new feature implementations, including planning, coding, testing, and deployment.
+          </>,
+          <>
+          Played a key role in delivering new features and resolving critical issues to improve user experience and system reliability.
+          </>,
+        ],
+        images: []
+      }
     ],
   },
   studies: {
@@ -138,53 +184,71 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "DIT University, Dehradun",
+        description: <>Completed M.Tech in Computer Science 
+        with a focus on cloud computing and resource optimization. 
+        Published research in the International Journal of Computer Applications.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Dehradun Institute of Technology, Dehradun",
+        description: <>Completed B.Tech in Information Technology, 
+        building a strong foundation in software development and database management.</>,
       },
     ],
   },
+  
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Java and Spring Boot",
+        description: <>Proficient in developing scalable and secure applications using Java (J2SE/J2EE) and Spring Boot for microservices architecture.</>,
+        images: [], 
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Python",
+        description: <>Experienced in building backend services, automations, and cloud-native applications using Python, with expertise in FastAPI.</>,
+        images: [],
+      },
+      {
+        title: "Node.js",
+        description: <>Skilled in developing scalable server-side applications and REST APIs using Node.js, with hands-on experience in Express.js and integrating with various databases.</>,
+        images: [],
+      },
+      {
+        title: "AWS Cloud",
+        description: <>Skilled in leveraging AWS services, including ECS, Fargate, S3, and RDS, API Gateway, Route53 etc. for cloud-native development.</>,
+        images: [],
+      },
+      {
+        title: "SQL and NoSQL Databases",
+        description: <>Extensive experience with MySQL, PostgreSQL, MongoDB, and Redis for relational and non-relational data management.</>,
+        images: [],
+      },
+      {
+        title: "Frontend Technologies",
+        description: <>Knowledgeable in JavaScript (ES6), ReactJS, and HTML/CSS for building interactive and responsive user interfaces.</>,
+        images: [],
+      },
+      {
+        title: "Kafka",
+        description: <>Experienced in real-time data streaming and message brokering with Kafka, ensuring high throughput and fault-tolerant solutions.</>,
+        images: [],
+      },
+      {
+        title: "DevOps and CI/CD",
+        description: <>Proficient in CI/CD pipelines using Jenkins, and experienced with Docker for containerized deployments.</>,
+        images: [],
+      },
+      {
+        title: "Design Principles",
+        description: <>Strong understanding of SOLID principles, design patterns like Singleton and Factory, and secure coding practices.</>,
+        images: [],
       },
     ],
   },
+  
 };
 
 const blog = {
@@ -201,6 +265,12 @@ const work = {
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
+};
+
+const notes = {
+  label: "Notes",
+  title: "My Notes",
+  description: `Notes by ${person.name}`
 };
 
 const gallery = {
@@ -282,4 +352,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, notes };

@@ -15,6 +15,14 @@ import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import { person, about, social } from "@/app/resources/content";
 
+interface Image {
+  width: number;
+  height: number;
+  alt: string;
+  src: string;
+}
+
+
 export async function generateMetadata() {
   const title = about.title;
   const description = about.description;
@@ -230,7 +238,7 @@ export default function About() {
                     </Column>
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                        {experience.images.map((image, index) => (
+                        {experience.images.map((image: Image, index) => (
                           <Flex
                             key={index}
                             border="neutral-medium"
@@ -294,7 +302,7 @@ export default function About() {
                     </Text>
                     {skill.images && skill.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
+                        {skill.images.map((image: Image, index) => (
                           <Flex
                             key={index}
                             border="neutral-medium"

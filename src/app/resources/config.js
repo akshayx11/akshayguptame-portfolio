@@ -1,25 +1,26 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "www.akshaygupta.me";
 
 const routes = {
   "/": true,
-  "/about": true,
-  "/work": true,
-  "/blog": true,
-  "/gallery": true,
+  "/about": false,
+  "/work": false,
+  "/blog": false,
+  "/gallery": false,
+  "/notes": true,
 };
 
 // Enable password protection on selected routes
 // Set password in pages/api/authenticate.ts
 const protectedRoutes = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
+  "/work": true,
 };
 
 const style = {
-  theme: "dark", // dark | light
+  theme: "light", // dark | light
   neutral: "gray", // sand | gray | slate
-  brand: "emerald", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   accent: "orange", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  solid: "contrast", // color | contrast
+  solid: "color", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
   surface: "translucent", // filled | translucent
@@ -51,20 +52,20 @@ const effects = {
     opacity: 20,
   },
   lines: {
-    display: false,
+    display: true,
     color: "neutral-alpha-weak",
     opacity: 100,
   },
   grid: {
-    display: false,
+    display: true,
     color: "neutral-alpha-weak",
     opacity: 100,
   },
 };
 
 const display = {
-  location: true,
-  time: true,
+  location: false,
+  time: false,
 };
 
 const mailchimp = {

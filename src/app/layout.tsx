@@ -11,6 +11,21 @@ import { Source_Code_Pro } from "next/font/google";
 
 import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
+import Head from "next/head";
+
+
+
+// export const metadata = {
+//   title: 'Akshay Gupta',
+//   description: 'Akshay Portfolio',
+//   manifest: '/manifest.json',
+//   viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+//   appleWebApp: {
+//     capable: true,
+//     title: 'Akshay Gupta',
+//     statusBarStyle: 'black-translucent'
+//   }
+// }
 
 export async function generateMetadata() {
   return {
@@ -25,6 +40,26 @@ export async function generateMetadata() {
       locale: "en_US",
       type: "website",
     },
+    viewport: 'initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimum-scale=1, viewport-fit=cover',
+    appleWebApp: {
+      capable: true,
+      title: 'Akshay Gupta',
+      statusBarStyle:  'default' //'black-translucent'
+    },
+    icons: {
+      apple: [
+        { 
+          url: '/apple-touch-icon.png', 
+          sizes: '180x180', 
+          type: 'image/png' 
+        },
+        { 
+          url: '/apple-touch-icon.png', 
+          sizes: '192x192', 
+          type: 'image/png' 
+        }
+      ]
+    },
     robots: {
       index: true,
       follow: true,
@@ -36,6 +71,7 @@ export async function generateMetadata() {
         "max-snippet": -1,
       },
     },
+    themeColor: "#b92b27"
   };
 }
 
@@ -140,7 +176,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             }}
           />
           <Flex fillWidth minHeight="16"></Flex>
-          <Header />
+          {/* <Header /> */}
           <Flex
             position="relative"
             zIndex={0}
@@ -158,5 +194,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         </Column>
       </ToastProvider>
     </Flex>
+
   );
 }
