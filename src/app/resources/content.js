@@ -106,6 +106,20 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "JPMorganChase",
+        timeframe: "2025 - Present",
+        role: "Software Engineer III",
+        achievements: [
+          <>
+            Utilizing Java, Spring Boot, and cloud technologies (AWS) to design and develop scalable backend systems.
+          </>,
+          <>
+            Applying GenAI tools and techniques to build intelligent, data-driven features and solutions.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "McKinsey & Company",
         timeframe: "2022 - 2024",
         role: "Software Engineer II",
